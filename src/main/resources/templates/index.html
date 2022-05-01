@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+            rel="stylesheet"
+    /><script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/InsertStudent.js"></script>
+    <script src="js/InsertProfesor.js"></script>
+    <script src="js/Table.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="d-flex flex-column">
+<div th:replace="~{fragments/navigation.html :: navigationFragment}" class="w-100"></div>
+
+<div th:switch="${page}" class="p-4 container">
+    <div th:case="'Home'">  <div th:replace="~{fragments/table.html :: tableFragment}" ></div></div>
+    <div th:case="'InsertStudentPage'"> <div th:replace="~{fragments/insertStudent.html :: InsertStudentFragment}" ></div></div>
+    <div th:case="'InsertProfesorPage'"><div th:replace="~{fragments/insertProfesor.html :: InsertProfesorFragment}" ></div></div>
+
+</div>
+
+</div>
+</body>
+</html>

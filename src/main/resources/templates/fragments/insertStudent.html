@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html   xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:fragment="InsertStudentFragment">
+    <form id="InsertStudentForm">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" required placeholder="Enter first name">
+
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" required placeholder="Enter last name">
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required  placeholder="Enter age">
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of birth</label>
+            <input type="date" class="form-control" id="dateOfBirth"  required name="dateOfBirth" placeholder="Enter date of birth">
+        </div>
+
+        <div class="form-group">
+            <label for="index">Index</label>
+            <input type="text" pattern="[0-9]{4}/[0-9]{4}"  required class="form-control" id="index" name="index" placeholder="Enter index">
+        </div>
+        <div class="form-group">
+            <label for="year">Example select</label>
+            <select class="form-control" id="year" name="year">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
